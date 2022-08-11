@@ -33,7 +33,7 @@ const main = async () => {
         const choice = await _question("Select an option: ");
         if (choice < 1 || choice > menu.length || isNaN(choice)) {
             console.log("Invalid option");
-            return;
+            rl.close();
         }
 
         await menuHandling(choice);
